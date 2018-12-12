@@ -10,4 +10,4 @@ Just clone the project and run
 `npm install`
 and
 `npm start`
-in your console. If you want to use this project, you should obtain a the keys to access the APIs and substitute `[your-key]` field in the requested URL.
+in your console. If you want to use this project, you should obtain your own keys to access the APIs and substitute `[your-key]` field in the requested URL.
