@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <title>Results</title>
+  </head>
+  <body class="bg-dark m-0">
+    <div class="container-fluid">
+      <div class="mx-auto text-left p-4 k m-5">
+        <h3   style="min-width: 180px"
+          class="text-light p-4 w-100 text-center bg-secondary rounded shadow"
+        >
+          <%= place %>
+        </h3>
+        <div
+          style="min-width: 180px"
+          class="card w-25 mx-auto m-5 rounded shadow"
+        >
+          <%if(icon==='partly-cloudy-day') { %>
+
+          <img
+            class="img-fluid"
+            width="250"
+            height="250"
+            src="icons/animated/cloudy-day-1.svg"
+            alt="<%=icon%>"
+          />
+          <% } %> <%if (icon==='partly-cloudy-night') { %>
+
+          <img
+            class="img-fluid"
+            width="250"
+            height="250"
+            src="icons/animated/cloudy-day-3.svg"
+            alt="<%=icon%>"
+          />
+          <% } else if (icon==='cloudy') { %>
+
+          <img
+            class="img-fluid"
+            width="250"
+            height="250"
+            src="icons/animated/cloudy.svg"
+            alt="<%=icon%>"
+          />
+          <% } else if (icon==='snow') { %>
+
+          <img
+            class="img-fluid"
+            width="250"
+            height="250"
+            src="icons/animated/snowy-1.svg"
+            alt="<%=icon%>"
+          />
+          <% }else if (icon==='clear-day') { %>
+
+          <img
+            class="img-fluid"
+            width="250"
+            height="250"
+            src="icons/animated/day.svg"
+            alt="<%=icon%>"
+          />
+          <% } else if (icon==='sleet') { %>
+
+          <img
+            class="img-fluid"
+            width="250"
+            height="250"
+            src="icons/animated/rainy-4.svg"
+            alt="<%=icon%>"
+          />
+          <% }else if (icon==='clear-night') { %>
+
+          <img
+            class="img-fluid"
+            width="250"
+            height="250"
+            src="icons/animated/night.svg"
+            alt="<%=icon%>"
+          />
+          <% } else if(icon===''){ %>
+          <img
+            class="img-fluid"
+            width="250"
+            height="250"
+            src=""
+            alt="weather-icon"
+          />
+          <% }%>
+        </div>
+        <div
+        style="min-width: 180px"
+          id="listed-results"
+          class="mx-auto text-left p-4 bg-secondary m-5 w-50 rounded shadow"
+        >
+          <ul style="list-style: none; margin:0px; padding: 0px;">
+            <li style="font-size: 1.1em" class="my-2">
+              Summary:<span class="text-light"> <%=results.summary%></span>
+            </li>
+            <li style="font-size: 1.1em" class="my-2">
+              Temperature:<span class="text-light">
+                <%=temperature%> degrees Celsius</span
+              >
+            </li>
+            <li style="font-size: 1.1em" class="my-2">
+              Relative humidity:<span class="text-light">
+                <%=results.humidity%></span
+              >
+            </li>
+            <li style="font-size: 1.1em" class="my-2">
+              Pressure:<span class="text-light"> <%=results.pressure%></span>
+            </li>
+            <li style="font-size: 1.1em" class="my-2">
+              WindSpeed:<span class="text-light"> <%=results.windSpeed%></span>
+            </li>
+            <li style="font-size: 1.1em" class="my-2">
+              Cloudcover:<span class="text-light">
+                <%=results.cloudCover%></span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
