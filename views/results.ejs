@@ -13,6 +13,9 @@
     <title>Results</title>
   </head>
   <body class="bg-dark m-0">
+    <button style="margin-top: 10rem" class="btn btn-info p-2 m-5 float-right" id="go-back" type="button">
+        <span>&#60;&nbsp;&nbsp;go to start</span>
+      </button>
     <div class="container-fluid">
       <div class="mx-auto text-left p-4 k m-5">
         <h3   style="min-width: 180px"
@@ -130,6 +133,17 @@
           </ul>
         </div>
       </div>
+
     </div>
+    <script>
+        const btn = document.querySelector('#go-back');
+        btn.addEventListener('click', function(){
+
+            window.location='http://localhost:3000/';
+
+        })
+      
+      
+       </script>
   </body>
 </html>

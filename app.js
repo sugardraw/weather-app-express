@@ -1,3 +1,5 @@
+//darksky.net code : 0bc482389970a7b2fcfa20591b770a7a
+//mapbox token: pk.eyJ1Ijoic3VnYXJkcmF3IiwiYSI6ImNqcGkzbW5vczEzYWkzcHA1dHoycnJ4MzMifQ.12gATJkF053PSxfxM_U4-g
 
 /**
  * icons types:
@@ -35,7 +37,7 @@ const getWeather = (address, lat, lng, res) => {
   console.log(lat, lng);
   request(
     {
-      url: ` https://api.darksky.net/forecast/[your-key]/${lat},${lng}`,
+      url: ` https://api.darksky.net/forecast/0bc482389970a7b2fcfa20591b770a7a/${lat},${lng}`,
       json: true
     },
     (error, response, body) => {
@@ -71,7 +73,7 @@ const getWeather = (address, lat, lng, res) => {
 const geocodeAddress = (address, callback, res) => {
   request(
     {
-      url: `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?types=address&access_token=[your-key]`,
+      url: `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?types=address&access_token=pk.eyJ1Ijoic3VnYXJkcmF3IiwiYSI6ImNqcGkzbW5vczEzYWkzcHA1dHoycnJ4MzMifQ.12gATJkF053PSxfxM_U4-g`,
       json: true
     },
     (error, response, body) => {
@@ -91,7 +93,7 @@ const geocodeAddress = (address, callback, res) => {
 checkAlternatives = (address, res) => {
   request(
     {
-      url: `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?types=address&access_token=[your-key]`,
+      url: `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?types=address&access_token=pk.eyJ1Ijoic3VnYXJkcmF3IiwiYSI6ImNqcGkzbW5vczEzYWkzcHA1dHoycnJ4MzMifQ.12gATJkF053PSxfxM_U4-g`,
       json: true
     },
     (error, response, body) => {
